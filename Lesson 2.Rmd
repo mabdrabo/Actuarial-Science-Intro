@@ -1,0 +1,27 @@
+---
+title: "Australian National University - Intoduction to Actuarial Science - Lesson 2"
+output: html_notebook
+---
+
+##Practice Question 2.1
+Calculate the single risk premium (to the nearest whole number) to be charged today on an insurance product that pays claims of $30,000 in 5 years from today, $50,000 in 10 years from today, and $70,000 in 15 years from today. Use an interest rate of 8% per annum.
+```{r}
+(30000*1.08^-5) + (50000*1.08^-10) + (70000*1.08^-15)
+```
+
+
+##Assessment Question 2.1
+Calculate the single risk premium (to 2 decimal places) to be charged today on an insurance product that pays regular claims of $500 in 1,2,3,…,25 years from today. Use an interest rate of 4% per annum.
+```{r}
+500*((1-(1.04^-25))/0.04)
+```
+
+
+##Assessment Question 2.2 (Hard)
+An insurance policy charges a regular risk premium, X, at Years 0,1,2,3,…,9 from today. The policy pays a claim of X^2 (i.e. X*X) in 15 Years from today. Calculate the value of X (to 2 decimal places), assuming an interest rate of 2% per annum.
+```{r}
+X^2 = X*((1-(1.02^-9))/0.02) * (1.02^6)
+X^2 = 10.9853 * X
+X = 10.9853
+```
+

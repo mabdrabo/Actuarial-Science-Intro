@@ -1,0 +1,33 @@
+---
+title: "Final Exam"
+output: html_notebook
+---
+```{r, echo=FALSE, render=F}
+require(magrittr)
+require(tidyverse)
+```
+
+
+#BACKGROUND
+An insurance company is considering the introduction of an investment-only product that provides a claim based on the accumulated value of premiums paid by a policyholder. Policyholders would pay annual premiums of X at Year 0, 1, 2, …, n−1 and would receive a claim equal to the accumulated value of the premium payments at Year n. Unless told otherwise, for the following questions use an interest rate of 4% per annum and assume that n=25. Assume also that, for the moment, and until told otherwise, policyholders do not die during the 25 year policy period.
+
+##Final Exam Question 1
+Calculate the present value (to 2 decimal places), at Year 0, of a single premium payment of $5,000 made at Year 12.
+```{r}
+5000/(1.04^12)
+```
+
+
+##Final Exam Question 2
+Calculate the accumulated value (to the nearest whole number), at the time that the claim is paid, of all of the premium payments of $5,000.
+```{r}
+res <- 5000*(((1.04^25)-1)/0.04)  # accumulated value from year 0 to n-1
+(res * 1.04) %>% round()         # accumulate extra year to reach year n
+```
+
+
+##Final Exam Question 3
+A policyholder is wishing to receive a claim payment of $300,000. Calculate the value of the premium payment X (to 2 decimal places), that will provide this claim payment.
+```{r}
+
+```

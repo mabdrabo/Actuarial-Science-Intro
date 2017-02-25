@@ -1,0 +1,57 @@
+---
+title: "Australian National University - Intoduction to Actuarial Science - Lesson 1"
+output: html_notebook
+---
+
+
+
+
+
+
+
+
+##Practice Question 1.2
+Calculate the present value, at an interest rate of 6% per annum, of a cash flow of $20,000 due in 25 years (to 2 decimal places).
+```{r}
+20000/(1.06^25)
+```
+
+
+##Assessment Question 1.2
+An individual is required to make a payment of $1,500 in 3 years from today. Calculate the amount that must be set aside today in order to have sufficient money to make the repayment (to 2 decimal places). Use an interest rate of 5.5% per annum.
+```{r}
+1500/(1.055^3)
+```
+
+
+
+##Practice Question 1.5
+Calculate the present value at Year 0, and the accumulated value at Year 30 (both to the nearest whole number), of an annuity of $25,000 paid at Year 1,2,3,…,30. Use an interest rate of 4.5% per annum.
+
+```{r}
+paste("Present value: 25000*((1-(1.045^-30))/0.045 =", 25000*((1-(1.045^-30))/0.045))
+paste("Accumulated value: 25000*(((1.045^30)-1)/0.045) =", 25000*(((1.045^30)-1)/0.045))
+```
+
+
+##Assessment Question 1.5
+An individual invests $2,000 every year for 40 years. Calculate the accumulated value of this investment (to the nearest whole number), at an interest rate of 7% per annum, at the time of the last $2,000 investment.
+```{r}
+2000*(((1.07^40)-1)/0.07)
+```
+
+
+##Assessment Question 1.6 (Hard)
+Calculate the total present value today (to 2 decimal places) of the following cash flows:
+$50 due in 1 year from today
+$100 due in 2 years from today
+$200 due yearly at 3,4,5,6,7,…,20 years from today
+Use an interest rate of 8% per annum.
+```{r}
+year_1 <- 50/(1.08)
+year_2 <- 100/(1.08^2)
+years_3_to_20 <- 200*((1-(1.08^-18))/0.08) # assuming it's year 0
+real_years_3_to_20 <- years_3_to_20/(1.08^2) # discounting 2 years
+(year_1 + year_2 + real_years_3_to_20)
+```
+
