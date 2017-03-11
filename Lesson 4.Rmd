@@ -1,0 +1,20 @@
+---
+title: "Australian National University - Intoduction to Actuarial Science - Lesson 4"
+author: "Mahmoud Abdrabo"
+date: "3/7/2017"
+output: pdf_document
+---
+
+##Practice Question 4.2
+Assuming that μ=0.02 and l30=100,000, use a spreadsheet tool to calculate the value of lx from x=31→80. What is the value of l57 (to the nearest whole number)?
+```{r}
+58275
+```
+
+
+##Assessment Question 4.2
+Assuming that μ=0.012 and l20=500,000, use a spreadsheet tool to calculate the value of lx from x=21→100. What is the value of l82 (to the nearest whole number)?
+```{r}
+237605
+```
+
